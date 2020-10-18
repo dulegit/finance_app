@@ -1,0 +1,213 @@
+:root {
+    --bg: #259ed9;
+    --color: #203649;
+    --light: #c3e4f3;
+    --important: #ff9b83;
+}
+
+/* GENERAL */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--color);
+    font-size: 16px;
+}
+input,
+select {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+    height: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: var(--color);
+    border: 1px solid var(--color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input:focus,
+select:focus {
+    outline: none;
+}
+input::-webkit-calendar-picker-indicator {
+    opacity: 100;
+    color: var(--color);
+}
+.is-hidden {
+    display: none!important;
+}
+.fa-header {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--bg);
+    color: var(--light);
+}
+.fa-header__title {
+    margin: 0 auto;
+    max-width: 60rem;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.45;
+}
+.fa-container {
+    width: calc(100% - 32px);
+    max-width: 60rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+}
+
+.fa-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgb(135 131 128 / 33%)
+}
+
+.fa-section--form {
+    border-radius: 0 0 4px 4px;
+}
+
+.fa-section--table {
+    max-height: calc(100vh - 194px);
+    overflow: auto;
+    border-bottom: 20px solid white;
+}
+
+.fa-section-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-template-rows: auto 82px 50px auto;
+
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: rgb(37 158 217 / 0.3);
+}
+
+/* FORM */
+.fa-form {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.fa-form__item {
+    display: grid;
+    gap: 8px;
+}
+
+@media (min-width: 750px) {
+    .fa-form {
+        grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    }
+}
+
+/* TABLE */
+.fa-table {
+    width: calc(60rem - 40px);
+    display: grid;
+    overflow-x: auto;
+}
+
+.fa-table__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 90px repeat(6, 138px);
+    align-items: center;
+}
+
+
+.fa-table__item:nth-child(even):not(.fa-table__item--total) {
+    background-color: var(--light);
+}
+
+.fa-table__item--total {
+    background-color: var(--bg);
+    color: #fff;
+    font-weight: 600;
+}
+
+.fa-table__item--total .fa-table__item-data:nth-child(1) {
+    grid-column: span 5;
+}
+.fa-table__item--total .fa-table__item-data:nth-child(2) {
+    grid-column: 6;
+}
+
+
+.fa-table__item--head .fa-table__item-data {
+    color: var(--important);
+    font-weight: 600;
+    border-right: none;
+}
+
+.fa-table__item-data {
+    padding: 10px;
+    min-height: 36px;
+}
+
+.fa-table__item-data:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+
+.fa-table__item-data--span {
+    height: calc(36px * 5);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+    background-color: var(--bg);
+    color: #fff;
+    font-weight: 600;
+}
+
+/* ALERT */
+.fa-alert__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--important);
+    text-align: center;
+}
+
+/* INDICATOR */
+.fa-indicator {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 50px 80px 50px;
+    grid-template-columns: minmax(200px, 1fr);
+    justify-items: center;
+}
+.fa-indicator__message {
+    font-size: 24px;
+    color: var(--important);
+    font-weight: 600;
+    grid-row: 1;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    height: 50px;
+}
+.fa-indicator__cube {
+    grid-row: 2;
+}
+.fa-indicator__cta {
+    grid-row: 3;
+}
+.fa-indicator__button {
+    padding: 10px 20px;
+    height: 50px;
+    border: 1px solid var(--important);
+    background: #fff;
+    border-radius: 24px;
+    color: var(--important);
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}

@@ -1,0 +1,61 @@
+.fa-cube-grid {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  
+  .fa-cube-grid .fa-cube {
+    width: 33%;
+    height: 33%;
+    background-color: var(--important);
+    float: left;
+    -webkit-animation: fa-cubeGridScaleDelay 1.3s infinite ease-in-out;
+            animation: fa-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+  }
+  .fa-cube-grid .fa-cube1 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .fa-cube-grid .fa-cube2 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .fa-cube-grid .fa-cube3 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; }
+  .fa-cube-grid .fa-cube4 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .fa-cube-grid .fa-cube5 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .fa-cube-grid .fa-cube6 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .fa-cube-grid .fa-cube7 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
+  .fa-cube-grid .fa-cube8 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .fa-cube-grid .fa-cube9 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  
+  @-webkit-keyframes fa-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); 
+    }
+  }
+  
+  @keyframes fa-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1);
+    } 
+  }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+    <header class="fa-header">
+        <h1 class="fa-header__title">
+            Finance App
+        </h1>
+    </header>
+    <div class="fa-container">
+        <section class="fa-section fa-section--form">
+            <form class="fa-form" onsubmit="event.preventDefault()">
+                <div class="fa-form__item">
+                    <label class="fa-form__label" for="fa-options">
+                        Enter symbol
+                    </label>
+                    <input class="fa-form__input js-fa-input" type="text" list="fa-options-list" name="fa-options" id="fa-options">
+                    <datalist id="fa-options-list">
+                        <option value="goog"></option>
+                        <option value="aapl"></option>
+                        <option value="msft"></option>
+                    </datalist>
+                </div>
+                <div class="fa-form__item">
+                    <label class="fa-form__label" for="fa-moving-avarage">
+                        Moving Avarage
+                    </label>
+                    <select disabled class="fa-form__select js-fa-input js-fa-moving-avarage" id="fa-moving-avarage">
+                        <option value="" selected hidden>Choose</option>
+                        <option value="5">5 days</option>
+                        <option value="10">10 days</option>
+                        <option value="20">20 days</option>
+                        <option value="30">30 days</option>
+                    </select>
+                </div>
+            </form>
+        </section>
+        <section class="fa-section fa-section--table js-fa-table is-hidden">
+            <div class="fa-table">
+                <div class="fa-table__head">
+                    <div class="fa-table__item fa-table__item--head">
+                        <div class="fa-table__item-data">order number</div>
+                        <div class="fa-table__item-data">date</div>
+                        <div class="fa-table__item-data">open</div>
+                        <div class="fa-table__item-data">high</div>
+                        <div class="fa-table__item-data">low</div>
+                        <div class="fa-table__item-data">close</div>
+                        <div class="fa-table__item-data">volume</div>
+                    </div>
+                </div>
+                <div class="fa-table__body js-fa-table-body">
+
+                </div>
+            </div>
+        </section>
+        <section class="fa-section fa-section--alert js-fa-alert">
+            <div class="fa-alert">
+                <h2 class="fa-alert__title">Enter symbol name to load the data.</h2>
+            </div>
+        </section>
+        <section class="fa-section-indicator js-fa-indicator is-hidden">
+            <div class="fa-indicator">
+                <div class="fa-indicator__message js-fa-indicator-message is-hidden"></div>
+                <div class="fa-indicator__cube fa-cube-grid">
+                    <div class="fa-cube fa-cube1"></div>
+                    <div class="fa-cube fa-cube2"></div>
+                    <div class="fa-cube fa-cube3"></div>
+                    <div class="fa-cube fa-cube4"></div>
+                    <div class="fa-cube fa-cube5"></div>
+                    <div class="fa-cube fa-cube6"></div>
+                    <div class="fa-cube fa-cube7"></div>
+                    <div class="fa-cube fa-cube8"></div>
+                    <div class="fa-cube fa-cube9"></div>
+                </div>
+                <div class="fa-indicator__cta js-fa-indicator-cta is-hidden">
+                    <button type="button" class="fa-indicator__button js-fa-indicator-button">Cancel request</button>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+<script src="js/dummyData.json" type="application/json"></script>
+<script src="js/main.js"></script>
+</html>
